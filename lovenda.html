@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 
+  Code Made By Deka Tutorial
+  Youtube: Deka Tutorial
+  Tiktok: @deka_tutorial
+  Instagram: deka_tutorial
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semangat Lindaa Bentar Lagi Lulus</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.1/dist/sweetalert2.all.min.js"></script>
+    <script src="https://dekatutorial.github.io/19gombal/scriptDT.js"></script>
+    <link rel="stylesheet" href="https://dekatutorial.github.io/19gombal/style.css" />
+  </head>
+  <body><div class="preload"><p>Loading dulu . . .</p></div>
+    <div class="content">
+      <button>Klik Aku</button>
+    </div>
+    <script>
+      musik = "NamaFileMusik.mp3";
+      window.addEventListener("load", (event) => { var load = document.querySelector(".preload"); load.style = "opacity: 0; transition: .5s ease all;"; setTimeout(() => { load.style.display = "none"; }, 500); }); document.querySelector("button").addEventListener("click", start); var musikku = new Audio(musik); musikku.loop = true;
+      async function start() {
+        musikku.play();
+        formKu();
+        inputSayang = document.querySelectorAll("input")[0];
+        inputKangen = document.querySelectorAll("input")[1];
+        inputPesan = document.querySelectorAll("input")[2];
+        sayangGak();
+      }
+
+      function sayangGak() {
+        dekatutorial.fire({ showDenyButton: true,
+            imageUrl: "https://dekatutorial.github.io/19gombal/stikerkuy/kamusayanggak.gif",
+            title: "Allo Linda Yang Cantek",
+            text: "Pilih Yaa :)",
+            denyButtonText: "Kiri",
+            confirmButtonText: "Kanan",
+          })
+          .then((e) => {
+            if (e.isConfirmed) {
+              dekatutorial.fire({ showDenyButton: true,
+                  imageUrl: "https://dekatutorial.github.io/19gombal/stikerkuy/akujugasayang.gif",
+                  title: "Berhubung Kamu Pilih Yang Kanan",
+                  text: "Kamu Harus Kirim Pap Lucu Kamu Ke Aku >_<",
+									denyButtonText: "Ganti Aja Deh",
+                  confirmButtonText: "Iya Udah Deh",
+                })
+                .then((e) => {
+                  if (e.isConfirmed) {
+                    dekatutorial.fire({
+                        imageUrl: "https://dekatutorial.github.io/19gombal/stikerkuy/akujugasayang.gif",
+                        title: "Klik Ini Ya Buat Kirim Pap nya",
+                        confirmButtonText: "Klik Aku >_<"
+                      })
+                      .then((e) => {
+  											if (e.isConfirmed) {
+    										window.open("https://wa.me/6289630863482"); 
+  										}
+										});
+                  } else {
+                    dekatutorial.fire({
+                        imageUrl: "https://dekatutorial.github.io/19gombal/stikerkuy/yaudah.gif",
+                        title: "Yakin Nih Mau Ganti? :(",
+                        confirmButtonText: "Iya Ganti"
+                      })
+                      .then((e) => {
+                      	if (e.isConfirmed) {
+                      		dekatutorial.fire({
+                        		imageUrl: "https://dekatutorial.github.io/19gombal/stikerkuy/akujugasayang.gif",
+                        		title: "Sebenernya Sama Aja Sih",
+                        		text: "Cuma Yang Ini Harus Lebih Banyak Kirimnya >_<",
+                        		confirmButtonText: "Yaudah Deh Aku Kirim"
+                      		})
+                      		.then((e) => {
+  													if (e.isConfirmed) {
+    												window.open("https://wa.me/6289630863482"); 
+  													}
+                      		})
+                      	}
+                      });
+                  }
+                });
+            } else {
+              dekatutorial.fire({ showDenyButton: true,
+                  imageUrl: "https://dekatutorial.github.io/19gombal/stikerkuy/akujugasayang.gif",
+                  title: "Berhubung Kamu Pilih Yang Kiri",
+                  text: "Kamu Harus Kirim Pap Imut Kamu Ke Aku >_<",
+									denyButtonText: "Ganti Aja Deh",
+                  confirmButtonText: "Iya Udah Deh",
+                })
+                .then((e) => {
+                  if (e.isConfirmed) {
+                    window.open("https://wa.me/6289630863482")
+                  } else {
+                    dekatutorial.fire({
+                        imageUrl: "https://dekatutorial.github.io/19gombal/stikerkuy/yaudah.gif",
+                        title: "Yakin Nih Mau Ganti? :(",
+                        confirmButtonText: "Iya Ganti"
+                      })
+                      .then((e) => {
+                      	if (e.isConfirmed) {
+                      		dekatutorial.fire({
+                        		imageUrl: "https://dekatutorial.github.io/19gombal/stikerkuy/akujugasayang.gif",
+                        		title: "Sebenernya Sama Aja Sih",
+                        		text: "Cuma Yang Ini Harus Lebih Banyak Kirimnya >_<",
+                        		confirmButtonText: "Yaudah Deh Aku Kirim"
+                      		})
+                      		.then((e) => {
+  													if (e.isConfirmed) {
+    												window.open("https://wa.me/6289630863482"); 
+  													}
+                      		})
+                      	}
+                      })
+                  }
+                });
+            }
+          });
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
